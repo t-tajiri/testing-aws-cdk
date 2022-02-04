@@ -1,0 +1,28 @@
+plugins {
+	id 'org.springframework.boot' version '2.6.2'
+	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id 'java'
+}
+
+group = 'me.ttajiri'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+//	implementation platform('com.amazonaws:aws-java-sdk-bom:1.12.130')
+//	implementation 'com.amazonaws:aws-java-sdk-cloudfront'
+//	implementation 'com.amazonaws:aws-java-sdk-secretsmanager'
+	implementation 'com.amazonaws:aws-java-sdk-cloudfront:1.11.106'
+	implementation 'com.amazonaws:aws-java-sdk-secretsmanager:1.12.151'
+}
+
+test {
+	useJUnitPlatform()
+}
